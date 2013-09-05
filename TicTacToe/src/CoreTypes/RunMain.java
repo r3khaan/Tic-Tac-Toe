@@ -5,9 +5,12 @@ public class RunMain extends JFrame{
 	
 	public RunMain() {
 		super("Tic-Tac-Toe");
-		setSize(225, 225);
+		setSize(DataManager.FrameWidth, DataManager.FrameHeight);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
+		DataManager.board = new Board();
+		add(DataManager.board);
+		DataManager.board.initialize();
 		setVisible(true);
 	}
 	

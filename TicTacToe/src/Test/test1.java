@@ -1,12 +1,20 @@
 package Test;
 
-public class test1 {
-	public static void main(String[] args) {
-		String b = null;
-		if (b == null) {
-			System.out.println("null");
-		}else {
-			System.out.println("not null");
-		}
-	}
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class test1 extends JPanel {
+
+  public test1() {
+
+      addMouseListener(new MouseAdapter() {
+    	  public void mousePressed(MouseEvent m) { 
+          System.out.println(m.getX()); 
+      }}); 
+
+  }
+
 }
